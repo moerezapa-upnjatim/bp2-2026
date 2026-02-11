@@ -22,5 +22,7 @@ public class klub {
         System.out.printf("Nama klub: %s\n", namaklub);
         System.out.printf("Nama kapten: %s\n", namakapten);
         System.out.printf("Nama pelatih: %s\n", namapelatih);
+        System.out.printf("Asal wilayah klub: %s\n", asalwilayah);
+        System.out.println("Jumlah trofi: " + jumlahtrofi);
     }
 }
