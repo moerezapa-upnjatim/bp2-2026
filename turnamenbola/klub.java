@@ -17,7 +17,7 @@ public class klub {
         this.asalwilayah = asalwilayah;
         this.jumlahtrofi = jumlahtrofi;
     }
-
+    
     public void tampilkanIdentitasKlub() {
         System.out.printf("Nama klub: %s\n", namaklub);
         System.out.printf("Nama kapten: %s\n", namakapten);
