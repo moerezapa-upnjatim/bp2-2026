@@ -5,8 +5,10 @@ public class alumni {
     int NPM; // by default, access modifier nya adalah private
     private String nama;
     private int tahunmasuk;
-    private static String programstudi = "Sistem Informasi";
+    // private static String programstudi = "Sistem Informasi";
+    private programstudi prodi;
     private double IPK;
+
 
     // contoh default constructor
     alumni() {
@@ -18,6 +20,13 @@ public class alumni {
         this.NPM = NPM;
         this.nama = nama;
         this.tahunmasuk = tahunmasuk;
+    }
+
+    alumni(int NPM, String nama, int tahunmasuk, programstudi prodi) {
+       this.NPM = NPM;
+       this.nama = nama;
+       this.tahunmasuk = tahunmasuk; 
+       this.prodi = prodi;
     }
 
     // contoh overload constructor
@@ -34,9 +43,9 @@ public class alumni {
     public String getNama() {
         return nama;
     }
-    public String getProgramStudi() {
-        return programstudi;
-    }
+    // public String getProgramStudi() {
+    //     return programstudi;
+    // }
     public int getTahunMasuk() {
         return tahunmasuk;
     }
@@ -50,7 +59,8 @@ public class alumni {
         System.out.println("NPM: " + NPM);
         System.out.println("Nama mahasiswa: " + nama);
         System.out.println("Angkatan: " + tahunmasuk);
-        System.out.println("Program Studi: " + programstudi);
+        // System.out.println("Program Studi: " + programstudi);
+       System.out.println("Program Studi: " + prodi.getNamaProdi()); 
     }
 
     // 3. method with input and without output
