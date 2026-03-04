@@ -9,8 +9,9 @@ public class alumni {
     private programstudi prodi;
     private double IPK;
 
+    private transcript transcriptMahasiswa;
 
-    // contoh default constructor
+    // contoh default constructor: 
     alumni() {
 
     }
@@ -20,6 +21,12 @@ public class alumni {
         this.NPM = NPM;
         this.nama = nama;
         this.tahunmasuk = tahunmasuk;
+
+        transcriptMahasiswa = new transcript(
+            this.nama, 
+            this.tahunmasuk, 
+            "A", 
+            "A-");
     }
 
     alumni(int NPM, String nama, int tahunmasuk, programstudi prodi) {
@@ -27,6 +34,12 @@ public class alumni {
        this.nama = nama;
        this.tahunmasuk = tahunmasuk; 
        this.prodi = prodi;
+
+       transcriptMahasiswa = new transcript(
+            this.nama, 
+            this.tahunmasuk, 
+            "A", 
+            "A-");
     }
 
     // contoh overload constructor
@@ -60,7 +73,15 @@ public class alumni {
         System.out.println("Nama mahasiswa: " + nama);
         System.out.println("Angkatan: " + tahunmasuk);
         // System.out.println("Program Studi: " + programstudi);
-       System.out.println("Program Studi: " + prodi.getNamaProdi()); 
+        System.out.println("Program Studi: " + prodi.getNamaProdi()); 
+    }
+
+    public void tampilkanTranscript() {
+        System.out.println("=== TRANSCRIPT ALUMNI ===");
+        System.out.println("NPM: " + NPM);
+        System.out.println("Nama mahasiswa: " + transcriptMahasiswa.getName());
+        System.out.println("Nilai BP1: " + transcriptMahasiswa.getNilaiBP1());
+        System.out.println("Nilai BP2: " + transcriptMahasiswa.getNilaiBP2());
     }
 
     // 3. method with input and without output
@@ -80,4 +101,9 @@ public class alumni {
         return IPK;
     }
     
+    // mengubah nilai BP1 alumni
+    void ubahNilaiBP1Alumni(String nilaiBP1Baru) {
+        transcriptMahasiswa.ubahNilaiBP1(nilaiBP1Baru);
+        transcriptMahasiswa.gradeNilaiBP1;
+    }
 }

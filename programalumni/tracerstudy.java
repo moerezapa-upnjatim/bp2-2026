@@ -1,5 +1,7 @@
 package programalumni;
 
+import java.util.Scanner;
+
 public class tracerstudy {
 
     public static void main(String[] args) {
@@ -17,10 +19,22 @@ public class tracerstudy {
         // alumni ian = new alumni(176, "Ian Prayitno", 1945);
         // ian.menampilkanDataAlumni();
 
-        programstudi prodi = new programstudi("Sistem Informasi", "FIK");
-        programstudi prodiInformatika = new programstudi("Informatika", "FIK");
-        alumni oji = new alumni(169, "Ahmad Fauzi", 1803, prodiInformatika);
-        oji.menampilkanDataAlumni();
+        Scanner scannerInput = new Scanner(System.in);
+    
+        
+        // programstudi prodiInformatika = new programstudi("Informatika", "FIK");
 
+        System.out.print("Masukkan nama alumni");
+        String namaAlumni = scannerInput.nextLine();
+        String namaProdiAlumni = scannerInput.nextLine();  
+        System.out.print("Masukkan program studi Alumni: ");
+        programstudi prodiAlumni = new programstudi(namaProdiAlumni, "FIK");
+        
+        alumni oji = new alumni(169, namaAlumni, 1803, prodiAlumni);
+        oji.menampilkanDataAlumni();
+        oji.tampilkanTranscript();
+
+        oji.ubahNilaiBP1Alumni("C");
+        oji.tampilkanTranscript();
     }
 }
